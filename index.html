@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--comando terminal: npx tailwindcss init
+    (necesitas tener instalado jsnode para que funcione)-->
+</head>
+<body>
+    <nav class="bg-[rgb(27,27,27)] h-[60px] flex justify-between items-center px-9"><!--h-[60px] la altura de tailwind y con el valor que TU QUIERAS-->
+        <p class="text-white font-bold text-2xl hover:cursor-pointer">logo</p>
+        <ul class="hidden text-white gap-[25px] sm:flex">
+            <!--sm:flex ( aparece en 600px o mas) hidden (desaparece en menos de 600px (movilfirst))-->
+            <li>inicio</li>
+            <li>Historia</li>
+            <li>Conctacto</li>
+        </ul>
+        <input class="hidden peer/menu" type="checkbox" 
+        name="menu-d" id="menu-d">
+        <!--peer/menu: identificador para cuando se de click al label se muestre y se desaparezca-->
+        <label class="sm:hidden z-10" for="menu-d">
+            <img class="w-[30px]" src="https://assets.stickpng.com/images/588a64c6d06f6719692a2d0c.png" alt="">
+        </label>
+        <aside class=" hidden peer-checked/menu:block fixed top-0 right-0 w[250px] h-screen bg-black">
+               <!--peer-checked/menu:block : llamamos al identificador que esta en input-->
+            Menu lateral
+        </aside>
+    </nav> 
+    <main class="h-screen bg-slate-900 flex justify-center items-center sm:bg-red-400 md:bg-green-500" >
+        <!--sm:bg-red-400 (Responsive tailwind, sm significa 600px o mas. Este responsive es movilfirst)-->
+        <h1 class="text-white">titulo</h1>
+    </main>
+    
+</body>
+</html>
